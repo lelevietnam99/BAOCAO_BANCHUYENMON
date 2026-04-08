@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ban Chuyên Môn - Phật Quang Quyền</title>
+    <style>
+        :root {
+            --primary-color: #1a237e; /* Xanh Navy đậm */
+            --accent-color: #bf953f; /* Vàng đồng */
+            --accent-light: #fcf6ba;
+            --text-dark: #2c3e50;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+            --danger: #c62828;
+            --success: #2e7d32;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px; /* Nới rộng container để chứa bảng nhiều cột */
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #283593);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, var(--accent-light), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Back Button */
+        .back-nav {
+            margin-bottom: 15px;
+        }
+        .back-nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-nav a:hover { color: var(--accent-color); }
+
+        /* Table Style */
+        .table-container {
+            background: var(--white);
+            border-radius: 12px;
+            overflow-x: auto;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1500px; /* Đảm bảo bảng không bị quá hẹp khi nhiều cột */
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: var(--accent-light);
+            text-align: left;
+            padding: 15px 10px;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        td {
+            padding: 15px 10px;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #f9f9f9;
+            font-size: 0.92em;
+            vertical-align: top;
+        }
+
+        tr:hover { background-color: #fcfcfc; }
+
+        .stt-col { text-align: center; font-weight: bold; width: 40px; }
+        .name-col { width: 150px; }
+        .badge {
+            display: inline-block;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .badge-sect { background: #e8eaf6; color: var(--primary-color); border: 1px solid var(--primary-color); }
+        .badge-fed { background: #fff3e0; color: #e65100; border: 1px solid #e65100; }
+        
+        .text-success { color: var(--success); font-weight: 500; }
+        .text-danger { color: var(--danger); font-weight: 500; }
+        .updating { color: #999; font-style: italic; font-size: 0.9em; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="back-nav">
+        <a href="index.html">← Quay lại danh sách CLB</a>
+    </div>
+
+    <header>
+        <h1>BÁO CÁO NHÂN SỰ BAN CHUYÊN MÔN</h1>
+        <p>Môn phái Phật Quang Quyền - Cập nhật tiến độ Quý 1/2026</p>
+    </header>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align: center;">STT</th>
+                    <th>Họ và Tên</th>
+                    <th>Pháp danh</th>
+                    <th>Năm sinh</th>
+                    <th>Cấp đai Môn phái</th>
+                    <th>Cấp đai Liên đoàn</th>
+                    <th>Đã hoàn thành</th>
+                    <th>Chưa hoàn thành</th>
+                    <th>Thuận lợi</th>
+                    <th>Khó khăn</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="stt-col">1</td>
+                    <td class="name-col"><strong>Đỗ Phú Tài</strong></td>
+                    <td>Trí Pháp Chương</td>
+                    <td class="updating">Đang cập nhật</td>
+                    <td>
+                        <span class="badge badge-sect">Võ sư</span><br>
+                        <small style="color: #666;">Thăng: 18/08/2024</small>
+                    </td>
+                    <td><span class="badge badge-fed">Chuẩn Võ sư</span></td>
+                    <td class="text-success">Vô tướng trượng pháp, nhuyễn cân pháp</td>
+                    <td class="text-danger">Tiểu luận</td>
+                    <td>Có thời gian đến lớp đều.</td>
+                    <td>Sức khoẻ chưa đáp ứng tập luyện ạ!</td>
+                    <td>Cần hỗ trợ chế độ tập phù hợp sức khỏe.</td>
+                </tr>
+                <tr>
+    <td class="stt-col">2</td>
+    <td class="name-col"><strong>Hoàng Văn Du</strong></td>
+    <td>Trí Thuần Tú</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng đai 2</span>
+    </td>
+    <td><span class="badge badge-fed">Trợ giáo cao cấp (3 đẳng)</span></td>
+    <td class="text-success">Kim long thương, phong vân tán</td>
+    <td class="text-danger">Huỳnh long độc kiếm, song luyện kiếm, thân pháp tổng hợp 2, lý thuyết</td>
+    <td>Không gian tập luyện trong lành; sức khỏe ổn định; tìm thấy niềm vui và trách nhiệm khi đến lớp.</td>
+    <td>Tự học qua clip (thiếu người chỉ dạy trực tiếp); ở xa Quý Thầy nên đôi khi thiếu sự đốc thúc; năng lực liên kết với Liên đoàn còn hạn chế.</td>
+    <td>Cần hỗ trợ đốc thúc và hướng dẫn chuyên môn trực tuyến để khắc phục khó khăn khi tự học.</td>
+</tr>
+<tr>
+    <td class="stt-col">3</td>
+    <td class="name-col"><strong>Nguyễn Tấn Phát</strong></td>
+    <td>Đồng Tuệ Giác</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng Đai 3</span>
+    </td>
+    <td><span class="badge badge-fed">Cấp 14</span></td>
+    <td class="text-success">Du Long Phiến, Kim Cang Song Giản</td>
+    <td class="text-danger">Bạch Hạc Thương, Song luyện 4</td>
+    <td>Có nhiều thời gian đến lớp võ.</td>
+    <td>Thiếu tư liệu tập luyện; thiếu huynh đệ tập luyện cùng phần song luyện.</td>
+    <td>Cần hỗ trợ cung cấp tài liệu kỹ thuật và sắp xếp nhân sự phối hợp tập song luyện.</td>
+</tr>
+<tr>
+    <td class="stt-col">4</td>
+    <td class="name-col"><strong>Võ Thị Kim Uyên</strong></td>
+    <td>Huệ Hoàng Hương</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng Đai Nhị Cấp</span><br>
+        <small style="color: #666;">Thăng: 19/01/2025</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 16</span></td>
+    <td class="text-success">Kim Long Thương, 5 thế đối luyện tiếp theo, Tiểu Luận</td>
+    <td class="text-danger">Phong Vân Tán, Huỳnh Long độc kiếm, Song luyện kiếm II</td>
+    <td>Thời gian đến lớp đều đặn; có sẵn clip mẫu để chủ động tự tập.</td>
+    <td>Chưa sắp xếp được thời gian tập luyện riêng một cách khoa học.</td>
+    <td>Cần hỗ trợ tư vấn cách cân đối lịch trình để tận dụng tốt nguồn tư liệu clip mẫu.</td>
+</tr>
+<tr>
+    <td class="stt-col">5</td>
+    <td class="name-col"><strong>Hoàng Thị Lộc</strong></td>
+    <td>Mẫn Phong Nhân</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng Đai I</span><br>
+        <small style="color: #666;">Thăng: 28/01/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 16 Quốc Gia (4 đẳng)</span></td>
+    <td class="text-success">Thanh Liên Kiếm, Tam Long Tuyệt Thần Đao</td>
+    <td class="text-danger">Độc Lư Thương, Song luyện 4</td>
+    <td>Đến lớp đều đặn.</td>
+    <td>Thiếu huynh đệ nữ cùng cấp để hỗ trợ đối luyện và song luyện; bận đứng lớp hướng dẫn nên phải tranh thủ tập thêm vào cuối buổi.</td>
+    <td>Cần hỗ trợ tìm đối tác nữ hỗ trợ tập cùng và điều phối thời gian đứng lớp hợp lý để hoàn thành chương trình chuyên môn.</td>
+</tr>
+<tr>
+    <td class="stt-col">6</td>
+    <td class="name-col"><strong>Trần Nhật An</strong></td>
+    <td>Nghĩa Thông Hải</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn Bạch Đai</span><br>
+        <small style="color: #666;">Thăng: 18/08/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Trợ giáo cấp 3 (3 đẳng)</span></td>
+    <td class="text-success">Tiên Long Song Kiếm, Tam Long Hý Nguyệt, Đối luyện - tự vệ</td>
+    <td class="text-danger">Lôi Long Đao, Thái Hư Khí Công, Tiểu luận</td>
+    <td>Thời gian đến lớp đều đặn; có huynh đệ gần nhắc nhở tập và hỗ trợ đứng lớp.</td>
+    <td>Chưa phân bổ được chương trình tập luyện cá nhân (dẫn đến trì trệ); sức khỏe đôi khi không đảm bảo.</td>
+    <td>Cần hỗ trợ hướng dẫn phương pháp lập kế hoạch tập luyện cá nhân và theo dõi tình hình sức khỏe để có cường độ tập phù hợp.</td>
+</tr>
+<tr>
+    <td class="stt-col">7</td>
+    <td class="name-col"><strong>Nguyễn Văn Nam</strong></td>
+    <td>Trí Tín Long</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Bạch Đai</span><br>
+        <small style="color: #666;">Thăng: 18/08/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Trợ giáo cấp 4 (4 đẳng)</span></td>
+    <td class="text-success">Vô Tướng Thiền Trượng, Nhuyễn Cân Pháp</td>
+    <td class="text-danger">Tiểu luận bài Vô Tướng Thiền Trượng</td>
+    <td>Thời gian buổi sáng các buổi đa phần rảnh, có thể tham gia các hoạt động của Môn phái.</td>
+    <td>Bận việc gia đình và buôn bán vào buổi tối nên chưa thể đi tập thường xuyên các buổi chính.</td>
+    <td>Cần hỗ trợ hướng dẫn tập luyện hoặc viết tiểu luận vào buổi sáng để tận dụng quỹ thời gian rảnh.</td>
+</tr>
+<tr>
+    <td class="stt-col">8</td>
+    <td class="name-col"><strong>Phạm Văn Quyết</strong></td>
+    <td>Đồng Thuận Tiến</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng Đai I</span>
+    </td>
+    <td><span class="badge badge-fed">Cấp 16 quốc gia (4 đẳng)</span></td>
+    <td class="updating">Đang cập nhật chuyên môn</td>
+    <td class="text-danger">Liên Hoa Kiếm, Siêu Xung Thiên, Thân Pháp, 5 thế đối luyện, tự vệ, phản đòn đá, Tiểu luận</td>
+    <td>Huynh đệ BHL tích cực hỗ trợ; địa điểm tập luyện thuận lợi và nhận được sự ủng hộ lớn.</td>
+    <td>Thời gian tập luyện hạn chế do khối lượng công việc nhiều.</td>
+    <td>Cần hỗ trợ sắp xếp lộ trình tập trung để hoàn thiện danh sách bài bản và tiểu luận còn dang dở.</td>
+</tr>
+<tr>
+    <td class="stt-col">9</td>
+    <td class="name-col"><strong>Lò Thị Lệ Trang</strong></td>
+    <td>Tâm Anh Huệ</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng Đai I</span><br>
+        <small style="color: #666;">Thăng: 18/08/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 15 Quốc Gia (3 đẳng)</span></td>
+    <td class="text-success">Thanh Liên Kiếm, Tam Long Tuyệt Thần Đao</td>
+    <td class="text-danger">Độc Lư Thương, Song luyện 4</td>
+    <td>Đến lớp đều đặn.</td>
+    <td>Dành phần lớn thời gian hướng dẫn lớp; Huynh đệ tập song luyện đang bận việc; Thiếu thảm tập chuyên dụng để tập lăn lộn.</td>
+    <td>Cần hỗ trợ trang bị thảm tập để đảm bảo an toàn khi tập động tác khó và điều phối người tập song luyện cùng.</td>
+</tr>
+<tr>
+    <td class="stt-col">10</td>
+    <td class="name-col"><strong>Nguyễn Tiến Vinh</strong></td>
+    <td>Trí Ngộ Thịnh</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn Võ Sư</span>
+    </td>
+    <td><span class="badge badge-fed">Trợ Giáo Cao Cấp (4 đẳng)</span></td>
+    <td class="text-success">Minh Nguyệt Song Đao, Tam Long Hý Nguyệt, Đối Luyện, Tự Vệ, Song luyện</td>
+    <td class="text-danger">Lôi Long Đao, Tiểu luận Hoàng Đai & Bạch Đai (đang chỉnh sửa)</td>
+    <td>Có tư liệu đầy đủ để tập luyện; Đảm bảo sức khỏe tốt.</td>
+    <td>Công việc đi làm về muộn nên chưa thể đến lớp đều; Đang bận tập trung tham gia lớp đối kháng chuẩn bị cho giải đấu sắp tới.</td>
+    <td>Cần lưu ý hỗ trợ về tiến độ tiểu luận trong giai đoạn bận thi đấu giải để đảm bảo hoàn thành đúng hạn.</td>
+</tr>
+<tr>
+    <td class="stt-col">11</td>
+    <td class="name-col"><strong>Nguyễn Kim Tình</strong></td>
+    <td>Đồng Tiến Pháp</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng đai 2</span>
+    </td>
+    <td><span class="badge badge-fed">Trợ giáo cao cấp (3 đẳng)</span></td>
+    <td class="text-success">Kim long thương</td>
+    <td class="text-danger">Huỳnh long độc kiếm, song luyện kiếm, thân pháp tổng hợp 2, lý thuyết, Tiểu luận</td>
+    <td>Có tư liệu đầy đủ; môi trường và điều kiện tập luyện tốt.</td>
+    <td>Chưa sắp xếp được thời gian đến lớp/tự tập; chưa có cặp tập song luyện; đang điều trị thuốc (ảnh hưởng thể lực và nhịp thở).</td>
+    <td>Cần đặc biệt lưu ý về cường độ tập luyện do tình trạng sức khỏe (đang dùng thuốc) và hỗ trợ tìm bạn tập song luyện cùng.</td>
+</tr>
+<tr>
+    <td class="stt-col">12</td>
+    <td class="name-col"><strong>Phạm Hữu Luân</strong></td>
+    <td>Lương Thái Khâm</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn võ sư</span>
+    </td>
+    <td><span class="badge badge-fed">Trợ giáo cao cấp (4 đẳng)</span></td>
+    <td class="text-success">Kim Cang Song Giản, Du Long Phiến, Minh Nguyệt Song Đao đối luyện, tự vệ, phản đòn đá, Tiểu luận</td>
+    <td class="updating">Đang cập nhật chuyên môn</td>
+    <td>Đảm bảo sức khỏe tốt; nhận được sự hỗ trợ tích cực từ các huynh đệ.</td>
+    <td>Thời gian tập luyện hạn hẹp do đi làm về muộn; Cuối tuần tập trung đứng lớp tại CLB Thái Minh và Đông Quang.</td>
+    <td>Ghi nhận sự cống hiến khi quản lý 2 CLB. Cần hỗ trợ sắp xếp lịch tập chuyên môn xen kẽ để không bị gián đoạn tiến độ cá nhân.</td>
+</tr>
+<tr>
+    <td class="stt-col">13</td>
+    <td class="name-col"><strong>Trịnh Thị Văn Bình</strong></td>
+    <td>Mẫn Tuệ Viên</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn Bạch Đai</span><br>
+        <small style="color: #666;">Thăng: 18/08/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 15 quốc gia (3 đẳng)</span></td>
+    <td class="text-success">Tiên Long Song Kiếm, Tam Long Hý Nguyệt, Đối luyện - tự vệ, Thái hư khí công</td>
+    <td class="text-danger">Lôi Long Đao</td>
+    <td>Có thời gian đến lớp đều đặn.</td>
+    <td>Hiện đang thiếu tài liệu hướng dẫn cho bài Lôi Long đao.</td>
+    <td>Đứng lớp/phụ lớp đầy đủ 3 buổi/tuần (có 1 buổi nâng cao cho phụ tá). Cần hỗ trợ cung cấp tư liệu bài Lôi Long Đao.</td>
+</tr>
+<tr>
+    <td class="stt-col">14</td>
+    <td class="name-col"><strong>Lê Đại Anh</strong></td>
+    <td>Trung Kiến Pháp</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng Đai I</span><br>
+        <small style="color: #666;">Thăng: 18/08/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 16 (4 đẳng)</span></td>
+    <td class="text-success">Tam Long Tuyệt Thần Đao, Thanh Liên Kiếm, Độc Lư Thương, SL 4, Đối Luyện - Tự Vệ</td>
+    <td class="text-danger">Tiểu luận</td>
+    <td>Có thời gian tập luyện đều đặn.</td>
+    <td>Hiện chưa có khó khăn gì.</td>
+    <td>Hiện đang phụ tá tại CLB Nguyễn Bỉnh Khiêm (3 buổi/tuần). Cần tập trung hoàn thiện phần Tiểu luận để kết thúc chương trình.</td>
+</tr>
+<tr>
+    <td class="stt-col">15</td>
+    <td class="name-col"><strong>Nguyễn Đình Quảng</strong></td>
+    <td>Trí Giới Hưng</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng đai đệ tam</span><br>
+        <small style="color: #666;">Thăng: 01/12/2025</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 15 quốc gia (3 đẳng)</span></td>
+    <td class="text-success">Du long phiến, Kim cang song giản, Song luyện kiếm, đối luyện, tự vệ</td>
+    <td class="text-danger">Bạch hạc thương, Song luyện 4, Thân pháp tổng hợp 2</td>
+    <td>Có thời gian đến lớp đều đặn.</td>
+    <td>Hiện đang thiếu tài liệu hướng dẫn bài Bạch hạc thương.</td>
+    <td>Đứng lớp/phụ lớp 3 buổi/tuần (có 1 buổi nâng cao cho phụ tá). Cần hỗ trợ tài liệu bài Bạch hạc thương.</td>
+</tr>
+<tr>
+    <td class="stt-col">16</td>
+    <td class="name-col"><strong>Nguyễn Thị Thảo</strong></td>
+    <td>Hoà Lý Anh</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn Bạch Đai</span><br>
+        <small style="color: #666;">Thăng: 07/12/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 17 quốc gia (5 đẳng)</span></td>
+    <td class="text-success">Vô tướng thiền trượng, Nhuyễn cân pháp (kỹ thuật còn yếu)</td>
+    <td class="text-danger">Thái hư khí công, Tĩnh quyền công</td>
+    <td>CLB gần chỗ ở; cơ sở vật chất sân thảm đầy đủ.</td>
+    <td>Học sinh bận học văn hóa nên phải chia lịch 4 buổi/tuần; thiếu tài liệu cho bài thi thăng đai chưa hoàn thành.</td>
+    <td>Đứng lớp chính 4 buổi/tuần. Cần hỗ trợ tài liệu học bài mới và hướng dẫn chỉnh sửa thêm về kỹ thuật căn bản.</td>
+</tr>
+<tr>
+    <td class="stt-col">17</td>
+    <td class="name-col"><strong>Phan Đình Khoa</strong></td>
+    <td>Trung Thuận Khánh</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng Đai II</span><br>
+        <small style="color: #666;">Thăng: 20/02/2025</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 15 (3 đẳng)</span></td>
+    <td class="updating">Đang cập nhật chuyên môn</td>
+    <td class="text-danger">Đối luyện 51-55, Kim Long Thương, Phong Vân Tán, Huỳnh Long Độc Kiếm</td>
+    <td>Có thời gian tập luyện đều đặn.</td>
+    <td>Ở xa Thầy Tổ nên khó khăn trong việc chỉ dạy trực tiếp; kỹ năng tự học qua clip chưa tốt.</td>
+    <td>Đang phụ trách CLB Khánh Minh - Gia Lai (3 buổi/tuần). Cần hỗ trợ hướng dẫn trực tuyến để cải thiện kỹ năng tự học.</td>
+</tr>
+<tr>
+    <td class="stt-col">18</td>
+    <td class="name-col"><strong>Lê Văn Hiếu</strong></td>
+    <td>Lương Hưng Chính</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn Bạch đai</span><br>
+        <small style="color: #666;">Thăng: 07/12/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 15</span></td>
+    <td class="text-success">Tiên Long Song Kiếm, Tam Long Hí Nguyệt, Tiểu luận, 70 thế đối luyện</td>
+    <td class="text-danger">Lôi Long Đao, Thái Hư Khí Công</td>
+    <td>Võ đường trang bị đầy đủ dụng cụ tập luyện.</td>
+    <td>Ở xa Tổ Đình và Thầy Tổ nên hạn chế việc chỉ dạy trực tiếp.</td>
+    <td>Có nền tảng cơ sở vật chất tốt. Cần hỗ trợ giáo trình hình ảnh/video chi tiết cho các bài chuyên sâu để tự tập luyện hiệu quả hơn.</td>
+</tr>
+<tr>
+    <td class="stt-col">19</td>
+    <td class="name-col"><strong>Nguyễn Thị Thương</strong></td>
+    <td>Huệ Nghiêm Huyền</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn Bạch Đai</span><br>
+        <small style="color: #666;">Thăng: 18/08/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Chuẩn võ sư</span></td>
+    <td class="text-success">Tiên Long Song Kiếm, Tam Long Hý Nguyệt, Đối luyện - tự vệ</td>
+    <td class="text-danger">Lôi Long Đao, Thái Hư Khí Công, Tiểu luận</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>Bận việc gia đình nên chưa sắp xếp tham gia tập luyện lại được.</td>
+    <td>Ghi nhận khó khăn về hoàn cảnh gia đình. Cần sự động viên từ huynh đệ để sớm ổn định và quay lại sinh hoạt chuyên môn.</td>
+</tr>
+<tr>
+    <td class="stt-col">20</td>
+    <td class="name-col"><strong>Đồng Ngọc Hưng</strong></td>
+    <td>Trung Hưng Tịnh</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn võ sư</span>
+    </td>
+    <td><span class="badge badge-fed">Trợ giáo cao cấp (4 đẳng)</span></td>
+    <td class="text-success">Đã hoàn thiện nội dung theo chương trình cũ</td>
+    <td class="text-danger">Lôi long đao, Thái hư thần công</td>
+    <td>Đảm bảo sức khỏe; nhận được sự hỗ trợ tích cực từ các huynh đệ.</td>
+    <td>Thời gian tới dự kiến hạn hẹp do bận việc gia đình (vợ trẻ con thơ).</td>
+    <td>Trách nhiệm phụ trách Võ đường. Cần ưu tiên hoàn thiện chương trình mới để phổ cập kiến thức cho các huynh đệ.</td>
+</tr>
+<tr>
+    <td class="stt-col">21</td>
+    <td class="name-col"><strong>Nguyễn Xuân Đạt</strong></td>
+    <td>Lương Thái Duệ</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Hoàng đai đệ nhất cấp</span><br>
+        <small style="color: #666;">Thăng: 07/12/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Cấp 13</span></td>
+    <td class="text-success">Thế đối luyện 46-50, các thế tự vệ, phản đòn, thân pháp</td>
+    <td class="text-danger">Tam Long tuyệt thần đao, Độc Lư thương, Thanh Liên kiếm, song luyện 4</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>Thường xuyên đi công tác; bận việc cá nhân và gia đình nên ít có thời gian tập luyện.</td>
+    <td>Đã xin phép tạm nghỉ đứng lớp; sẽ tham gia sinh hoạt khi sắp xếp được thời gian. Cần hỗ trợ lộ trình tập bù khi đi công tác về.</td>
+</tr>
+<tr>
+    <td class="stt-col">22</td>
+    <td class="name-col"><strong>Phạm Thái Trung</strong></td>
+    <td>Tịnh Phước Quý</td>
+    <td class="updating">Đang cập nhật</td>
+    <td>
+        <span class="badge badge-sect">Chuẩn Võ sư</span><br>
+        <small style="color: #666;">Thăng: 20/09/2024</small>
+    </td>
+    <td><span class="badge badge-fed">Chuẩn võ sư</span></td>
+    <td class="text-success">Tam Long Hý Nguyệt, Tiên Long song kiếm</td>
+    <td class="text-danger">Lôi Long đao, đối luyện 66-70, tiểu luận</td>
+    <td>Nhà gần lớp võ, thuận tiện cho việc di chuyển.</td>
+    <td>Tự tập luyện là chính; thiếu thảm và dụng cụ ảnh hưởng đến tập thân pháp; chưa cân bằng được thời gian dạy và tập cá nhân.</td>
+    <td>Đứng lớp 3 buổi/tuần. Cần hỗ trợ trang bị thêm dụng cụ tập luyện tại chỗ và tư vấn cách phân bổ thời gian giữa đứng lớp và rèn luyện bản thân.</td>
+</tr>
+                </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
